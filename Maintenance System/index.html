@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Request Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2 class="form-title">EASTERN SAMAR STATE UNIVERSITY</h2>
+        <h3 class="form-subtitle">REQUEST FOR SERVICE</h3>
+
+        <form id="requestForm" action="/submit-request" method="POST" enctype="multipart/form-data">
+            <div class="form-section">
+                <h4>Box 1: To be filled up by the Requesting Officer</h4>
+
+                <div class="form-group-inline">
+                    <label for="dateOfRequest">Date of Request:</label>
+                    <input type="date" id="dateOfRequest" name="dateOfRequest">
+                </div>
+
+                <div class="form-group-inline">
+                    <label for="requestingOffice">Requesting Office/Department:</label>
+                    <input type="text" id="requestingOffice" name="requestingOffice">
+                </div>
+
+                <div class="form-group">
+                    <p class="checkbox-label">Type of Request:</p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="typeOfRequest" value="Construction"> Construction</label>
+                        <label><input type="checkbox" name="typeOfRequest" value="Repair/Maintenance"> Repair/Maintenance</label>
+                        <label><input type="checkbox" name="typeOfRequest" value="Preparation"> Preparation</label>
+                        <label><input type="checkbox" name="typeOfRequest" value="Cleaning"> Cleaning</label>
+                        <label><input type="checkbox" name="typeOfRequest" value="Drafting"> Drafting</label>
+                        <label><input type="checkbox" name="typeOfRequest" value="Others"> Others</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="otherDetails">Other Details of Request (Indicate when should the request be completed):</label>
+                    <textarea id="otherDetails" name="otherDetails" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="attachments">Upload any relevant files (e.g., photos):</label>
+                    <input type="file" id="attachments" name="attachments" multiple>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Submit Request</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
